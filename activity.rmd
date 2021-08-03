@@ -98,13 +98,13 @@ function gauss_seidel(matriz, b, x0, user_error, max_iter)
 
       for k = 1 : j - 1
 
-        current_sum = current_sum + matriz(j, k) * x(j);
+        current_sum = current_sum + matriz(j, k) * x(k);
 
       end
 
       for k = j + 1 : n
         
-        current_sum = current_sum + matriz(j, k) * x0(j);
+        current_sum = current_sum + matriz(j, k) * x0(k);
       
       end
 
@@ -206,6 +206,5 @@ Octave en este caso.
 
 # Conclusión
 
-Después de desarrollar la actividad planteada, me di cuenta que los resultados obtenidos no son los mismos
-entre ambos métodos. Según la teoría el método de Gauss-Seidel debería tomar menos iteraciones, por tanto,
-no es correcto. Sin embargo, los resultados del método de Jacobi son correctos.
+Después de desarrollar la actividad planteada, comparé ambos resultados y concuerdan. Además se demuestra
+que el método de Gauss-Seidel requiere de menos iteraciones para llegar al error aproximado.
